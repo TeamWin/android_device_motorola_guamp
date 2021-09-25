@@ -17,9 +17,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/twrp_cebu.mk
+     $(LOCAL_DIR)/twrp_guamp.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_cebu-user \
-    twrp_cebu-userdebug \
-    twrp_cebu-eng
+    twrp_guamp-user \
+    twrp_guamp-userdebug \
+    twrp_guamp-eng

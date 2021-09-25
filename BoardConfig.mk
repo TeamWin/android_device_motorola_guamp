@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/cebu
+DEVICE_PATH := device/motorola/guamp
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := bengal
@@ -68,7 +68,7 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 \
 			service_locator.enable=1 \
 			swiotlb=2048 \
 			androidboot.hab.csv=5 \
-			androidboot.hab.product=cebu \
+			androidboot.hab.product=guamp \
 			androidboot.hab.cid=50 \
 			firmware_class.path=/vendor/firmware_mnt/image
 # For the love of all that is holy, please do not include this in your ROM unless you really want TWRP to not work correctly!
@@ -84,22 +84,13 @@ BOARD_KERNEL_SECOND_OFFSET := 0x00000000
 BOARD_KERNEL_TAGS_OFFSET   := 0x00000100
 BOARD_DTB_OFFSET           := 0x01f00000
 BOARD_DTBO_OFFSET          := 0x016f9000
-#BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_INCLUDE_RECOVERY_DTBO := true
-#BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-#TARGET_KERNEL_VERSION := 4.19
-#TARGET_KERNEL_CLANG_COMPILE := true
-#TARGET_KERNEL_CLANG_VERSION := r353983d
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-#TARGET_KERNEL_SOURCE := kernel/motorola/cebu
-TARGET_KERNEL_CONFIG := cebu_defconfig
-
-BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
@@ -190,10 +181,6 @@ TW_INCLUDE_CRYPTO := true
 BOARD_USES_METADATA_PARTITION := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-# Installer
-#USE_RECOVERY_INSTALLER := true
-#RECOVERY_INSTALLER_PATH := device/motorola/cebu/installer
-
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
@@ -211,7 +198,6 @@ TW_DEFAULT_BRIGHTNESS := 1000
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_RESETPROP := true
-#TW_NO_SCREEN_BLANK := true
 TW_HAS_EDL_MODE := true
 
 # Debug flags

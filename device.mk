@@ -25,7 +25,7 @@ PRODUCT_PLATFORM := bengal
 # A/B support
 AB_OTA_UPDATER := true
 
-LOCAL_PATH := device/motorola/cebu
+LOCAL_PATH := device/motorola/guamp
 
 # A/B
 AB_OTA_PARTITIONS += \
