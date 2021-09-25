@@ -25,15 +25,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Inherit from guamp device
 $(call inherit-product, device/motorola/guamp/device.mk)
 
-# Inherit some common TWRP stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit some common PitchBlack stuff.
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := guamp
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := guamp
-PRODUCT_NAME := twrp_guamp
+PRODUCT_NAME := omni_guamp
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g(9)
 PRODUCT_MANUFACTURER := motorola

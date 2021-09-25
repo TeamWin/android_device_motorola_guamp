@@ -17,9 +17,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/twrp_guamp.mk
+     $(LOCAL_DIR)/omni_guamp.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_guamp-user \
-    twrp_guamp-userdebug \
-    twrp_guamp-eng
+    omni_guamp-user \
+    omni_guamp-userdebug \
+    omni_guamp-eng
