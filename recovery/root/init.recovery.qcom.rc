@@ -29,7 +29,6 @@ import /init.recovery.qcom_decrypt.rc
 
 on boot
     start health-hal-2-1
-    start load_ts_firmware
     setprop sys.usb.config adb
 
 on fs
@@ -41,10 +40,3 @@ on fs
 on property:ro.crypto.type=file
     setprop ro.crypto.state encrypted
     setprop twrp.apex.loaded true
-
-service load_ts_firmware /system/bin/load_ts_firmware.sh
-    oneshot
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
