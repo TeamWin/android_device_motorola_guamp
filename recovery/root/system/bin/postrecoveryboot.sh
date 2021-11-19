@@ -26,11 +26,14 @@ insmod $module_path/qpnp-power-on-mmi.ko
 insmod $module_path/qpnp_adaptive_charge.ko
 
 # Fix up chipone
-chipone_fw_path=/vendor/firmware/ICNL9911.bin
-flash_path=/sys/chipone-tddi/cts_firmware
+if [[ -d /sys/class/touchscreen/ICNL9911S ]]; then
+        echo "chipone"
+        chipone_fw_path=/vendor/firmware/ICNL9911.bin
+        flash_path=/sys/chipone-tddi/cts_firmware
 
-sleep 2
+        sleep 2
 
-echo $chipone_fw_path > $flash_path/update_from_file
+        echo $chipone_fw_path > $flash_path/update_from_file
+fi
 
 exit 0
