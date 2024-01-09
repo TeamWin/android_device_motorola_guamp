@@ -92,7 +92,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.filenames_mode=aes-256-cts \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.dm_default_key.options_format.version=2 \
-    ro.crypto.volume.options=::v2
+    ro.crypto.volume.options=::v2 \
+    keymaster_ver=4.0
 
 # Blacklist
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
