@@ -34,6 +34,7 @@ LOCAL_PATH := device/motorola/guamp
 AB_OTA_PARTITIONS += \
     boot \
     system \
+    system_ext \
     vendor \
     product \
     recovery \
